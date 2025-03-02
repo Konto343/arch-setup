@@ -1,0 +1,5 @@
+# How to install home setup to local
+sudo cp -rf ./home/. ~/
+
+# If Davinci Doesn't work, install a opencl engine
+sudo pacman -S opencl-nvidia
