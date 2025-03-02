@@ -17,9 +17,7 @@ home directory.
 - Notifier:		Mako
 - App Launcher:		Wofi/Rofi
 - File Explorer:	Thunar
-- Window Compsitor: 	Hyprland
-- **+ Waybar,Hyprlock,Hypridle,Waypaper,Hyprpicker**
-
+- Window Compsitor: 	Hyprland **+ Waybar,Hyprlock,Hypridle,Waypaper,Hyprpicker**
 - Firewall:		Ufw
 - Browser: 		LibreWolf
 - Communications: 	Vesktop, Hexchat
