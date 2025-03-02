@@ -5,21 +5,21 @@ My arch setup for new computers. Includes my personal dotfile and scripts as wel
 I nicked name this setup: "Kool"
 
 This setup is supposed to be:
-- Fast
-- Minimalist/Clean
-- Resource Effecient
-- "Just Works"
-- Privacy-Focused
+- Fast & Minimalist
+
+## Usage:
+Copy the Repo, and run the "install_setup.sh" script, and copy over the "home" folder to your
+home directory.
 
 ## In this setup:
 - Terminal: 		Kitty
 - Shell:		Fish
 - Notifier:		Mako
-- App Launcher:		Wofi
+- App Launcher:		Wofi/Rofi
 - File Explorer:	Thunar
 - Window Compsitor: 	Hyprland
+- **+ Waybar,Hyprlock,Hypridle,Waypaper,Hyprpicker**
 - Firewall:		Ufw
- 	**+ Waybar,Hyprlock,Hypridle,Waypaper,Hyprpicker**
 - Browser: 		LibreWolf
 - Communications: 	Vesktop, Hexchat
 - Mail: 		BetterBird
@@ -32,7 +32,3 @@ This setup is supposed to be:
 - Video Editor:		OpenShot
 - Office Suite:		LibreOffice (Still)
 - Image Editor:		Gimp,Inkscape
-
-## Usage:
-Copy the Repo, and run the "install_setup.sh" script, and copy over the "home" folder to your
-home directory.
