@@ -19,6 +19,7 @@ home directory.
 - File Explorer:	Thunar
 - Window Compsitor: 	Hyprland
 - **+ Waybar,Hyprlock,Hypridle,Waypaper,Hyprpicker**
+
 - Firewall:		Ufw
 - Browser: 		LibreWolf
 - Communications: 	Vesktop, Hexchat
