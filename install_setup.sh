@@ -53,7 +53,7 @@ if yesno "Do you want to install the base setup?"; then
 fi
 
 if yesno "Do you have a Nvidia GPU?"; then
-	yes | sudo pacman -S nvidia nvidia-utils nvidia-container-toolkit opencl-nvidia
+	yes | sudo pacman -S nvidia nvidia-utils nvidia-container-toolkit opencl-nvidia lib32-nvidia-utils
 fi
 
 if yesno "Do you intend to use Docker?"; then
