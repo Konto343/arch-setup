@@ -12,3 +12,7 @@ set fish_greeting
 # Alias
 alias ls='ls -la'
 alias reload_waybar="pkill waybar && hyprctl dispatch exec waybar"
+
+function weather
+    curl "https://wttr.in/$argv[1]"
+end
