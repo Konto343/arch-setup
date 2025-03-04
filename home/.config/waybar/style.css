@@ -66,15 +66,26 @@ window#waybar.hidden {
 #tray {
 	margin: 0px 0px;
 	padding: 0px 5px;
-	color: #0051FF;
-	background-color: #00184b;
+	color: #ffffff;
+	background-color: #000000;
+}
+
+#pulseaudio,
+#memory {
+	color: #0051FF
 }
 
 #custom-weather {
 	margin: 0px 0px;
 	padding: 0px 10px;
 	color: #00FF95;
-	background-color: #004227;
+}
+
+#custom-launcher {
+	margin: 0px 0px;
+	padding: 0px 20px;
+	background-color: #FFFFFF;
+	color: #000000;
 }
 
 #custom-media {
@@ -82,70 +93,45 @@ window#waybar.hidden {
 	padding: 0px 10px;
 }
 
-#tray {
-	color: #FFFFFF;
-	background-color: #000000;
-}
-
-#privacy {
-	color: #FFFFFF;
-	background-color: #000000;
-}
-
-#clock {
-	color: #FFFFFF;
-	background-color: #000000;
-}
-
 #systemd-failed-units {
 	color: #FF1500;
-	background-color: #3f0000;
 }
 
 #pulseaudio.muted,
 #pulseaudio.source-muted {
 	color: #FF1500;
-	background-color: #3f0000;
 }
 
 #network {
 	color: #00FF15;
-	background-color: #0b4100;
 }
 
 #network.disabled,
 #network.disconnected {
 	color: #FF1500;
-	background-color: #3f0000;
 }
 
 #idle_inhibitor.activated {
 	color: #FF9000;
-	background-color: #683b00;
 }
 
 #idle_inhibitor.deactivated {
 	color: #FF9000;
-	background-color: #683b00;
 }
 
 #power-profiles-daemon.performance {
 	color: #FF9000;
-	background-color: #683b00;
 }
 
 #power-profiles-daemon.power-saver {
 	color: #00FF15;
-	background-color: #0b4100;
 }
 
 #power-profiles-daemon.balanced {
 	color: #9500FF;
-	background-color: #2c004b;
 }
 
-#custom-power,
-#custom-launcher {
+#custom-power {
 	margin: 0px 0px;
 	padding: 0px 20px;
 	color: #000000;
@@ -153,19 +139,18 @@ window#waybar.hidden {
 }
 
 #bluetooth {
-	color: #009EFF;
-	background-color: #0064a1;
+	color: #0051FF
 }
 
 #bluetooth.disabled,
 #bluetooth.off,
 #bluetooth.no-controller {
 	color: #FF1500;
-	background-color: #3f0000;
 }
 
 #battery {
 	color: #46ec6a;
+	background-color: #000000;
 }
 
 #battery.warning,
