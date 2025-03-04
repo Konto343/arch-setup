@@ -132,7 +132,7 @@
 	"network": {
 		"format-wifi": "  Wifi {signalStrength}%",
 		"format-ethernet": "󰌗 Ethernet",
-		"tooltip-format": "{ifname} (via) {gwaddr}",
+		"tooltip-format": "{ifname} (via) {gwaddr} @ {essid}",
 		"format-linked": "{ifname} (No IP) ",
 		"format-disconnected": "Disconnected ⚠",
 		"format-alt": "{ifname}: {ipaddr}/{cidr}",
