@@ -5,7 +5,7 @@ do
     if [[ $? == 0 ]]
     then
         text=$(echo "$text" | sed -E "s/\s+/ /g")
-        tooltip=$(curl -s "https://wttr.in/?format=1")
+        tooltip=$(curl -s "https://wttr.in/?format=4")
         if [[ $? == 0 ]]
         then
             tooltip=$(echo "$tooltip" | sed -E "s/\s+/ /g")

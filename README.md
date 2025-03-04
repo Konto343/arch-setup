@@ -6,9 +6,10 @@ I nicked name this setup: "Kool"
 
 This setup is supposed to be:
 - Fast & Minimalist
+- Cool
 
 ## Usage:
-Copy the Repo, and run the "install_setup.sh" script, and copy over the "home" folder to your
+Copy the Repo, and run the "install_setup.sh" script, and finally copy over the "home" folder to your
 home directory.
 
 ## In this setup:
@@ -25,7 +26,7 @@ home directory.
 - Passwords: 		KeePassXc
 - Recording:		Obs
 - Code Editor:		VsCodium
-- Text Editor:		Neovim, Vim
+- Text Editor:		Neovim, Nano
 - Video Player:		Mpv
 - Notes:		Obsidian
 - Video Editor:		OpenShot
