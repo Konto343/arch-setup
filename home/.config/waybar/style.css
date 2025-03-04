@@ -151,6 +151,7 @@ window#waybar.hidden {
 #battery {
 	color: #46ec6a;
 	background-color: #000000;
+	padding: 0px 20px;
 }
 
 #battery.warning,
