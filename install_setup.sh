@@ -49,7 +49,7 @@ if yesno "Do you want to install the base setup?"; then
 	yes | sudo pacman -S 7zip blueman btop fzf powertop dust cmus cups fish flatpak geeqie gimp git qalculate-gtk orage gnome-clocks gnome-disk-utility gnome-maps cherrytree hexchat inkscape jre21-openjdk keepassxc kitty libreoffice-still mpv mupdf nano ncdu fastfetch neovim npm obs-studio obsidian openshot pyenv signal-desktop tmux tor ufw unzip tar tumbler ffmpeg ffmpegthumbnailer lshw nano-syntax-highlighting tealdeer rsync powertop speedtest-cli
 
 	info "Adding Syntax Highlighting For Nano (System)"
-	echo "include /usr/share/nano-syntax-highlighting/*.nanorc" >> /etc/nanorc
+	echo "include /usr/share/nano-syntax-highlighting/*.nanorc" | sudo tee -a /etc/nanorc
 
 	info "File System support(s)"
 	yes | sudo pacman -S gvfs gvfs-gphoto2 gvfs-mtp mtpfs ntfs-3g
