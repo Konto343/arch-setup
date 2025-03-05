@@ -32,7 +32,7 @@ sudo pacman -S --needed base-devel git github-cli reflector
 
 if yesno "Do you want update Pacman Mirrors to the fastest available? (Will override current.)"; then
 	info "Getting fastest Pacman mirrors"
-	sudo reflector --latest 20 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+	sudo reflector --country France,Germany --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose
 fi
 
 if yesno "Do you want to install the base setup?"; then
@@ -45,7 +45,7 @@ if yesno "Do you want to install the base setup?"; then
 	sudo pacman -S xdg-desktop-portal-hyprland qt5-wayland qt6-wayland polkit-kde-agent kitty grim slurp thunar nwg-look nwg-bar blueman brightnessctl mako pavucontrol playerctl waybar wl-clipboard rofi ttf-jetbrains-mono-nerd power-profiles-daemon
 
 	info "Installing Must needs"
-	sudo pacman -S 7zip blueman btop fzf powertop dust cmus cups fish flatpak geeqie gimp git qalculate-gtk orage gnome-clocks gnome-disk-utility gnome-maps cherrytree hexchat inkscape jre21-openjdk keepassxc kitty libreoffice-fresh mpv mupdf nano ncdu fastfetch neovim npm obs-studio obsidian openshot pyenv signal-desktop tmux tor ufw unzip tar tumbler ffmpeg ffmpegthumbnailer lshw nano-syntax-highlighting tealdeer rsync powertop speedtest-cli blender
+	sudo pacman -S 7zip blueman btop fzf powertop dust cmus cups fish flatpak geeqie gimp git qalculate-gtk orage gnome-clocks gnome-disk-utility gnome-maps cherrytree hexchat inkscape jre21-openjdk keepassxc kitty libreoffice-fresh mpv mupdf nano ncdu fastfetch neovim npm obs-studio obsidian openshot pyenv signal-desktop tmux tor ufw unzip zip tar tumbler ffmpeg ffmpegthumbnailer lshw nano-syntax-highlighting tealdeer rsync powertop speedtest-cli blender
 
 	info "Adding Syntax Highlighting For Nano (System)"
 	echo "include /usr/share/nano-syntax-highlighting/*.nanorc" | sudo tee -a /etc/nanorc
