@@ -27,9 +27,8 @@ else
 	exit
 fi
 
-info "Updating Pacman and Installing base-devel"
-sudo pacman -Syu
-yes | sudo pacman -S --needed base-devel git github-cli reflector
+info "Pacman Installing base-devel"
+sudo pacman -S --needed base-devel git github-cli reflector
 
 if yesno "Do you want update Pacman Mirrors to the fastest available? (Will override current.)"; then
 	info "Getting fastest Pacman mirrors"
@@ -38,46 +37,42 @@ fi
 
 if yesno "Do you want to install the base setup?"; then
 	info "Installing Ly (Greeter)"
-	yes | sudo pacman -S ly
-	yes | sudo systemctl enable ly
+	sudo pacman -S ly
+	sudo systemctl enable ly
 
 	info "Installing Hyprland"
-	yes | sudo pacman -S hypridle hyprland hyprlock hyprpaper hyprpicker xdg-desktop-portal-hyprland
-	yes | sudo pacman -S xdg-desktop-portal-hyprland xorg-xhost qt5-wayland qt6-wayland polkit-kde-agent kitty grim slurp thunar nwg-look nwg-bar blueman brightnessctl mako pavucontrol playerctl waybar wl-clipboard wofi rofi ttf-jetbrains-mono-nerd power-profiles-daemon
+	sudo pacman -S hypridle hyprland hyprlock hyprpaper hyprpicker xdg-desktop-portal-hyprland
+	sudo pacman -S xdg-desktop-portal-hyprland qt5-wayland qt6-wayland polkit-kde-agent kitty grim slurp thunar nwg-look nwg-bar blueman brightnessctl mako pavucontrol playerctl waybar wl-clipboard rofi ttf-jetbrains-mono-nerd power-profiles-daemon
 
 	info "Installing Must needs"
-	yes | sudo pacman -S 7zip blueman btop fzf powertop dust cmus cups fish flatpak geeqie gimp git qalculate-gtk orage gnome-clocks gnome-disk-utility gnome-maps cherrytree hexchat inkscape jre21-openjdk keepassxc kitty libreoffice-still mpv mupdf nano ncdu fastfetch neovim npm obs-studio obsidian openshot pyenv signal-desktop tmux tor ufw unzip tar tumbler ffmpeg ffmpegthumbnailer lshw nano-syntax-highlighting tealdeer rsync powertop speedtest-cli
+	sudo pacman -S 7zip blueman btop fzf powertop dust cmus cups fish flatpak geeqie gimp git qalculate-gtk orage gnome-clocks gnome-disk-utility gnome-maps cherrytree hexchat inkscape jre21-openjdk keepassxc kitty libreoffice-fresh mpv mupdf nano ncdu fastfetch neovim npm obs-studio obsidian openshot pyenv signal-desktop tmux tor ufw unzip tar tumbler ffmpeg ffmpegthumbnailer lshw nano-syntax-highlighting tealdeer rsync powertop speedtest-cli blender
 
 	info "Adding Syntax Highlighting For Nano (System)"
 	echo "include /usr/share/nano-syntax-highlighting/*.nanorc" | sudo tee -a /etc/nanorc
 
 	info "File System support(s)"
-	yes | sudo pacman -S gvfs gvfs-gphoto2 gvfs-mtp mtpfs ntfs-3g
+	sudo pacman -S gvfs gvfs-gphoto2 gvfs-mtp mtpfs ntfs-3g
 fi
 
 if yesno "Do you have a Nvidia GPU?"; then
-	yes | sudo pacman -S nvidia nvidia-utils nvidia-container-toolkit opencl-nvidia lib32-nvidia-utils
+	sudo pacman -S nvidia nvidia-utils nvidia-container-toolkit opencl-nvidia # lib32-nvidia-utils
 fi
 
 if yesno "Do you intend to use Docker?"; then
-	yes | sudo pacman -S docker docker-compose
+	sudo pacman -S docker docker-compose
 fi
 
 if yesno "Do you want to install the yay package manager?"; then
 	sudo rm -r yay
 	sudo git clone https://aur.archlinux.org/yay.git
-	sudo chown 1000:1000 ~/yay/
-	cd yay
+	sudo chown -R 1000:1000 yay
+ 	cd yay
 	makepkg -si
 	yay --version
 fi
 
 if yesno "Do you want to install extra yay packages?"; then
 	yay -S vesktop-bin vscodium-bin betterbird-bin librewolf-bin cbonsai pipes.sh cava octopi waypaper localsend-bin
-fi
-
-if yesno "Do you want to cleanup packages?"; then
-	sudo pacman -Scc && yay -Scc && pacman -Qtdq | sudo pacman -Rns -
 fi
 
 info "SETUP COMPLETE"
