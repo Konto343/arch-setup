@@ -15,7 +15,7 @@
 		"privacy"
 	],
 
-	"modules-center":[  
+	"modules-center":[
 		"clock"
 	],
 
@@ -28,7 +28,7 @@
 		"format": "{icon} {text}",
 		"escape": true,
 		"return-type": "json",
-		"max-length": 20,
+		"max-length": 50,
 		"on-click": "playerctl play-pause",
 		"on-click-right": "playerctl stop",
 		"on-scroll-up": "playerctl next",
@@ -66,29 +66,31 @@
 				"tooltip-icon-size": 24
 			}
 		]
-	},    
+	},
 
 	"hyprland/workspaces": {
 		"format": "{name}",
-	   	"persistent-workspaces": {
-		   "*": [1,2,3,4,5,6]
-	   	}
+		"persistent-workspaces": {
+			"*": [1,2,3,4,5,6]
+		}
 	},
 
 	"systemd-failed-units": {
 		"hide-on-ok": true,
-		"format": "Failed Units: {nr_failed}",
+		"format": "{nr_failed} ",
+		"tooltip": true,
+		"tooltip-format": "Failed SystemD Units",
 		"system": true,
 		"user": true,
 		"on-click": "kitty --hold sh -c 'systemctl list-units --state failed'"
 	},
 
 	"bluetooth": {
-		"format-on": " On",
-		"format-off": " Off",
-		"format-connected": " connected",
-		"format-disabled": " Disabled",
-		"format-no-controller": " No Controller",
+		"format-on": "",
+		"format-off": "󰂲",
+		"format-connected": "󰂰",
+		"format-disabled": "󰂲",
+		"format-no-controller": "󰂲",
 		"on-click": "blueman-manager",
 		"on-click-right": "killall blueman-manager",
 		"tooltip" : true,
@@ -130,11 +132,11 @@
 	},
 
 	"network": {
-		"format-wifi": "  Wifi {signalStrength}%",
-		"format-ethernet": "󰌗 Ethernet",
+		"format-wifi": "",
+		"format-ethernet": "󰌗",
 		"tooltip-format": "{ifname} (via) {gwaddr} @ {essid}",
 		"format-linked": "{ifname} (No IP) ",
-		"format-disconnected": "Disconnected ⚠",
+		"format-disconnected": "󰤮",
 		"format-alt": "{ifname}: {ipaddr}/{cidr}",
 		"on-click-right": "kitty --hold sh -c 'iwctl'"
 	},
@@ -147,7 +149,7 @@
 		"format-source": "",
 		"format-source-muted": "",
 		"format-icons": {
-			"headphone": " ",
+			"headphone": "",
 			"hands-free": "",
 			"headset": "",
 			"phone": "",
@@ -176,14 +178,14 @@
 	},
 
 	"power-profiles-daemon": {
-		"format": "{profile} {icon}",
-  		"tooltip-format": "Power profile: {profile} Driver: {driver}",
-  		"tooltip": true,
-  		"format-icons": {
-				"default": "",
-				"performance": "",
-				"balanced": "",
-				"power-saver": ""
+		"format": "{icon}",
+		"tooltip-format": "Power profile: {profile} Driver: {driver}",
+		"tooltip": true,
+		"format-icons": {
+			"default": "",
+			"performance": "",
+			"balanced": "",
+			"power-saver": ""
 		}
 	},
 
