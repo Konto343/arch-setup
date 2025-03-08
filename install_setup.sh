@@ -72,7 +72,7 @@ if yesno "Do you want to install the yay package manager?"; then
 fi
 
 if yesno "Do you want to install extra yay packages?"; then
-	yay -S vesktop-bin vscodium-bin betterbird-bin librewolf-bin cbonsai pipes.sh cava octopi waypaper localsend-bin
+	yay -S vesktop-bin vscodium-bin betterbird-bin librewolf-bin cbonsai pipes.sh cava waypaper localsend-bin
 fi
 
 info "SETUP COMPLETE"
