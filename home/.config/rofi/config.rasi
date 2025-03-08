@@ -1,0 +1,59 @@
+* {
+	dark: rgba(0,0,0,1);
+	white: rgba(255,255,255,1);
+}
+
+window {
+	background-color: @dark;
+	border-color: @white;
+	border-width: 1px;
+}
+
+textbox {
+    text-color: @white;
+        border-color: @white;
+}
+
+inputbar {
+    spacing:    0;
+    text-color: @white;
+    padding:    1px;
+    border-color: @white;
+}
+
+entry {
+    spacing:    0;
+    text-color: @white;
+        border-color: @white;
+	border-width: 1px;
+}
+
+scrollbar {
+    width:        3px ;
+    border:       0;
+    handle-color: @white;
+    handle-width: 8px ;
+    padding:      0;
+}
+
+element {
+    border:  0;
+    padding: 1px;
+}
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+element.alternate.normal {
+    background-color: @dark;
+    text-color:       @white;
+}
+element.normal.normal {
+    background-color: @dark;
+    text-color:       @white;
+}
+
+prompt {
+    spacing:    0;
+    text-color: @white;
+}
