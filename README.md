@@ -1,5 +1,5 @@
 ![alt text](image.png "Image")
-                                                                                             
+
 # My Arch Setup:
 My arch setup for new computers. Includes my personal dotfile and scripts as well.
 I nicked name this setup: "Kool"
@@ -18,7 +18,7 @@ home directory.
 - Terminal: 		Kitty
 - Shell:		Fish
 - Notifier:		Mako
-- App Launcher:		Wofi/Rofi
+- App Launcher:		Rofi
 - File Explorer:	Thunar
 - Window Compsitor: 	Hyprland **+ Waybar,Hyprlock,Hypridle,Waypaper,Hyprpicker**
 - Firewall:		Ufw
@@ -32,5 +32,5 @@ home directory.
 - Video Player:		Mpv
 - Notes:		Obsidian
 - Video Editor:		OpenShot
-- Office Suite:		LibreOffice (Still)
+- Office Suite:		LibreOffice (Fresh)
 - Image Editor:		Gimp,Inkscape
