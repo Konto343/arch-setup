@@ -1,0 +1,221 @@
+{
+	"layer": "top",
+	"position": "bottom",
+	"height": 20,
+	"spacing": 0,
+	"margin-left": 0,
+	"margin-right": 0,
+	"margin-top": 0,
+	"margin-bottom": 0,
+
+	"modules-left":[
+		"hyprland/workspaces",
+		"tray",
+		"custom/media",
+		"privacy"
+	],
+
+	"modules-center":[
+		"clock",
+		"custom/weather"
+	],
+
+	"modules-right":[
+		"battery",
+		"group/hardware"
+	],
+
+	"custom/media": {
+		"format": "{icon} {text}",
+		"escape": true,
+		"return-type": "json",
+		"max-length": 50,
+		"on-click": "playerctl play-pause",
+		"on-click-right": "playerctl stop",
+		"on-scroll-up": "playerctl next",
+		"on-scroll-down": "playerctl previous",
+		"exec": "~/.config/waybar/mediaplayer.py 2> /dev/null",
+		"tooltip" : true,
+		"tooltip-format" : "Player Control"
+	},
+
+	"backlight": {
+		"format": "{percent}% {icon}",
+		"format-icons": ["", ""],
+		"tooltip" : true,
+		"tooltip-format": "Backlight Level"
+	},
+
+	"privacy": {
+		"icon-spacing": 4,
+		"icon-size": 18,
+		"transition-duration": 0,
+		"modules": [
+			{
+				"type": "screenshare",
+				"tooltip": true,
+				"tooltip-icon-size": 24
+			},
+			{
+				"type": "audio-out",
+				"tooltip": true,
+				"tooltip-icon-size": 24
+			},
+			{
+				"type": "audio-in",
+				"tooltip": true,
+				"tooltip-icon-size": 24
+			}
+		]
+	},
+
+	"hyprland/workspaces": {
+		"format": "{name}",
+		"persistent-workspaces": {
+			"*": [1,2,3,4,5,6]
+		}
+	},
+
+	"systemd-failed-units": {
+		"hide-on-ok": true,
+		"format": "{nr_failed} ",
+		"tooltip": true,
+		"tooltip-format": "Failed SystemD Units",
+		"system": true,
+		"user": true,
+		"on-click": "kitty --hold sh -c 'systemctl list-units --state failed'"
+	},
+
+	"bluetooth": {
+		"format-on": "",
+		"format-off": "󰂲",
+		"format-connected": "󰂰",
+		"format-disabled": "󰂲",
+		"format-no-controller": "󰂲",
+		"on-click": "blueman-manager",
+		"on-click-right": "killall blueman-manager",
+		"tooltip" : true,
+		"tooltip-format" : "Bluetooth"
+	},
+
+	"idle_inhibitor": {
+		"format": "Idle: {icon}",
+		"format-icons": {
+			"activated": "On",
+			"deactivated": "Off"
+		}
+	},
+
+	"tray": {
+		"icon-size": 20,
+		"spacing": 10
+	},
+
+	"clock": {
+		"format": "{:%H:%M:%S %p, %A, %b%e}",
+		"interval": 1,
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		"format-alt": "{:%Y-%m-%d}",
+		"on-click-right": "kitty --hold sh -c 'cal'"
+	},
+
+	"battery": {
+		"states": {
+			"good": 95,
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{capacity}% {icon}",
+		"format-charging": "{capacity}% ",
+		"format-plugged": "{capacity}% ",
+		"format-alt": "{time} {icon}",
+		"format-icons": ["", "", "", "", ""]
+	},
+
+	"network": {
+		"format-wifi": "",
+		"format-ethernet": "󰌗",
+		"tooltip-format": "{ifname} (via) {gwaddr} @ {essid}",
+		"format-linked": "{ifname} (No IP) ",
+		"format-disconnected": "󰤮",
+		"format-alt": "{ifname}: {ipaddr}/{cidr}",
+		"on-click-right": "kitty --hold sh -c 'iwctl'"
+	},
+
+	"pulseaudio": {
+		"format": "{volume}% {icon}",
+		"format-bluetooth": "{volume}% {icon}",
+		"format-bluetooth-muted": "{icon} ",
+		"format-muted": "",
+		"format-source": "",
+		"format-source-muted": "",
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["", "", ""]
+		},
+		"on-click": "pavucontrol",
+		"on-click-right": "killall pavucontrol"
+	},
+
+	"custom/launcher":{
+		"format": "",
+		"on-click": "rofi -show drun -show-icons",
+		"on-click-right": "killall rofi",
+		"tooltip": true,
+		"tooltip-format": "App Launcher"
+	},
+
+	"custom/power":{
+		"format": "⏻",
+		"tooltip": true,
+		"tooltip-format": "Power Options",
+		"on-click": "nwg-bar",
+		"on-click-right": "killall nwg-bar"
+	},
+
+	"custom/weather": {
+		"exec": "~/.config/waybar/get_weather.sh",
+		"on-click": "kitty --hold sh -c 'curl wttr.in'",
+		"return-type": "json",
+		"format": "{}",
+		"tooltip": true,
+		"interval": 1800
+	},
+
+	"power-profiles-daemon": {
+		"format": "{icon}",
+		"tooltip-format": "Power profile: {profile} Driver: {driver}",
+		"tooltip": true,
+		"format-icons": {
+			"default": "",
+			"performance": "",
+			"balanced": "",
+			"power-saver": ""
+		}
+	},
+
+	"group/hardware" : {
+		"orientation": "inherit",
+		"drawer": {
+			"children-class": "not-power",
+			"transition-duration": 0
+		},
+		"modules": [
+			"custom/launcher",
+			"pulseaudio",
+			"backlight",
+			"power-profiles-daemon",
+			"idle_inhibitor",
+			"network",
+			"bluetooth",
+			"systemd-failed-units",
+			"custom/power"
+		]
+	}
+}
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<submenu></submenu>
+	<unique-id>1739114318904881-1</unique-id>
+	<command>kitty --working-directory=%f</command>
+	<description>Opens a Terminal set to a directory.</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>accessories-text-editor</icon>
+	<name>Edit In Nano</name>
+	<submenu></submenu>
+	<unique-id>1740184033398771-1</unique-id>
+	<command>kitty -e nano %f</command>
+	<description>Opens a file in Nano</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<other-files/>
+	<text-files/>
+</action>
+</actions>

@@ -1,0 +1,180 @@
+* {
+	border: 10px;
+	min-height: 0;
+	font-family: JetBrainsMono Nerd Font;
+	font-size: 13px;
+	font-weight: 900;
+}
+
+window#waybar {
+	background-color: #000000;
+}
+
+window#waybar.hidden {
+	opacity: 0.5;
+}
+
+#workspaces {
+	background-color: transparent;
+}
+
+#workspaces button {
+	all: initial;
+	min-width: 0;
+	box-shadow: inset 0 -3px transparent;
+	padding: 0px 10px;
+	margin: 0px 0px;
+	font-weight: 900;
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+#workspaces button.active {
+	opacity: 1;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+
+#workspaces button:hover {
+	box-shadow: inherit;
+	text-shadow: inherit;
+	color: #000000;
+	background-color: #212121;
+}
+
+#workspaces button.urgent {
+	background-color: #FF1500;
+	opacity: 1;
+}
+
+#memory,
+#custom-power,
+#user,
+#battery,
+#network,
+#clock,
+#bluetooth,
+#pulseaudio,
+#idle_inhibitor,
+#cpu,
+#power-profiles-daemon,
+#temperature,
+#custom-launcher,
+#privacy,
+#backlight,
+#systemd-failed-units,
+#tray {
+	margin: 0px 0px;
+	padding: 0px 10px;
+	color: #ffffff;
+	background-color: #000000;
+}
+
+#backlight {
+	color: #0051FF;
+}
+
+#pulseaudio,
+#memory {
+	color: #0051FF;
+}
+
+#custom-weather {
+	margin: 0px 0px;
+	padding: 0px 10px;
+}
+
+#custom-power,
+#custom-launcher {
+	margin: 0px 0px;
+	padding: 0px 20px;
+	color: #FFFFFF;
+}
+
+#custom-media {
+	margin: 0px 0px;
+	padding: 0px 5px;
+	background-color: #FFFFFF;
+	color: #000000;
+}
+
+#systemd-failed-units {
+	color: #FF1500;
+}
+
+#pulseaudio.muted,
+#pulseaudio.source-muted {
+	color: #FF1500;
+}
+
+#network {
+	color: #00FF15;
+}
+
+#network.disabled,
+#network.disconnected {
+	color: #FF1500;
+}
+
+#idle_inhibitor.activated {
+	color: #FF9000;
+}
+
+#idle_inhibitor.deactivated {
+	color: #0051FF;
+}
+
+#power-profiles-daemon.performance {
+	color: #FF9000;
+}
+
+#power-profiles-daemon.power-saver {
+	color: #00FF15;
+}
+
+#power-profiles-daemon.balanced {
+	color: #9500FF;
+}
+
+#bluetooth {
+	color: #0051FF;
+}
+
+#bluetooth.disabled,
+#bluetooth.off,
+#bluetooth.no-controller {
+	color: #FF1500;
+}
+
+#battery {
+	color: #00FF15;
+	background-color: #000000;
+	padding: 0px 10px;
+}
+
+#battery.warning,
+#battery.critical {
+	background-color: #ffaa00;
+	color: #000000;
+}
+
+#battery.urgent {
+	background-color: #ff6f00;
+	color: #000000;
+}
+
+#battery.charging {
+	background-color: #17ff02;
+	color: #000000;
+}
+
+tooltip {
+	border-radius: 0px;
+	padding: 15px;
+	background-color: #000000;
+}
+
+tooltip label {
+	padding: 5px;
+	background-color: #000000;
+}
