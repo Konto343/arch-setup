@@ -112,11 +112,11 @@
 	},
 
 	"clock": {
-		"format": "{:%H:%M:%S %p, %A, %b%e}",
+		"format": "{:%H:%M:%S %p %b-%e}",
 		"interval": 1,
 		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
 		"format-alt": "{:%Y-%m-%d}",
-		"on-click-right": "kitty --hold sh -c 'cal'"
+		"on-click-right": "kitty --hold sh -c 'cal --year'"
 	},
 
 	"battery": {
@@ -139,7 +139,7 @@
 		"format-linked": "{ifname} (No IP) ",
 		"format-disconnected": "󰤮",
 		"format-alt": "{ifname}: {ipaddr}/{cidr}",
-		"on-click-right": "kitty --hold sh -c 'iwctl'"
+		"on-click-right": "kitty --hold sh -c 'nmtui'"
 	},
 
 	"pulseaudio": {

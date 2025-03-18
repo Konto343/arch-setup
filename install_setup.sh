@@ -58,7 +58,7 @@ if yesno "Do you want to install the base setup?"; then
 	sudo pacman -S 7zip blueman btop fzf powertop dust cmus cups cups-filters cups-pdf fish flatpak git jre21-openjdk kitty nano ncdu fastfetch neovim npm pyenv tmux ufw unzip zip tar tumbler ffmpeg ffmpegthumbnailer lshw nano-syntax-highlighting tealdeer rsync powertop speedtest-cli
 
 	info "Installing Extras"
-	sudo pacman -S blender gimp qalculate-gtk orage gnome-clocks gnome-disk-utility gnome-maps cherrytree hexchat inkscape geeqie libreoffice-fresh mpv mupdf obs-studio obsidian openshot
+	sudo pacman -S blender gimp qalculate-gtk orage gnome-clocks gnome-disk-utility gnome-maps cherrytree hexchat inkscape geeqie libreoffice-fresh mpv mupdf obs-studio obsidian openshot networkmanager
 
 	info "Installing Security Extras"
 	sudo pacman -S keepassxc tor signal-desktop element-desktop syncthing wireshark-cli dnscrypt-proxy
