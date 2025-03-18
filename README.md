@@ -8,8 +8,6 @@ This setup is supposed to be:
 - Fast & Minimalist
 - Cool
 
-![alt text](image2.png "Image")
-
 ## Usage:
 Copy the Repo, and run the "install_setup.sh" script, and finally copy over the "home" folder to your
 home directory.

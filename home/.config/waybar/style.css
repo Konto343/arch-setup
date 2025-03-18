@@ -82,12 +82,13 @@ window#waybar.hidden {
 #custom-weather {
 	margin: 0px 0px;
 	padding: 0px 10px;
+	color: #0051FF;
 }
 
 #custom-power,
 #custom-launcher {
 	margin: 0px 0px;
-	padding: 0px 20px;
+	padding: 0px 5px;
 	color: #FFFFFF;
 }
 
