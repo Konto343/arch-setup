@@ -1,7 +1,7 @@
 {
 	"layer": "top",
-	"position": "bottom",
-	"height": 20,
+	"position": "top",
+	"height": 25,
 	"spacing": 0,
 	"margin-left": 0,
 	"margin-right": 0,
@@ -15,13 +15,12 @@
 		"privacy"
 	],
 
-	"modules-center":[
-		"clock",
-		"custom/weather"
-	],
+	"modules-center":[],
 
 	"modules-right":[
 		"battery",
+		"custom/weather",
+		"clock",
 		"group/hardware"
 	],
 
@@ -99,10 +98,10 @@
 	},
 
 	"idle_inhibitor": {
-		"format": "Idle: {icon}",
+		"format": "{icon}",
 		"format-icons": {
-			"activated": "On",
-			"deactivated": "Off"
+			"activated": "",
+			"deactivated": ""
 		}
 	},
 
@@ -111,13 +110,32 @@
 		"spacing": 10
 	},
 
-	"clock": {
-		"format": "{:%H:%M:%S %p, %A, %b%e}",
-		"interval": 1,
-		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-		"format-alt": "{:%Y-%m-%d}",
-		"on-click-right": "kitty --hold sh -c 'cal'"
+"clock": {
+	"format": "{:%H:%M}  ",
+	"format-alt": "{:%A, %B %d, %Y (%R)}",
+	"tooltip-format": "<tt><small>{calendar}</small></tt>",
+	"calendar": {
+		"mode"          : "year",
+		"mode-mon-col"  : 3,
+		"weeks-pos"     : "right",
+		"on-scroll"     : 1,
+		"on-click-right": "mode",
+		"format": {
+			"months":     "<span color='#ffead3'><b>{}</b></span>",
+			"days":       "<span color='#ecc6d9'><b>{}</b></span>",
+			"weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+			"weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+			"today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+		}
 	},
+	"actions": {
+		"on-click-right": "mode",
+		"on-click-forward": "tz_up",
+		"on-click-backward": "tz_down",
+		"on-scroll-up": "shift_up",
+		"on-scroll-down": "shift_down"
+	}
+},
 
 	"battery": {
 		"states": {
@@ -139,7 +157,7 @@
 		"format-linked": "{ifname} (No IP) ",
 		"format-disconnected": "󰤮",
 		"format-alt": "{ifname}: {ipaddr}/{cidr}",
-		"on-click-right": "kitty --hold sh -c 'iwctl'"
+		"on-click-right": "kitty --hold sh -c 'nmtui'"
 	},
 
 	"pulseaudio": {
@@ -163,7 +181,7 @@
 	},
 
 	"custom/launcher":{
-		"format": "",
+		"format": "󰞓",
 		"on-click": "rofi -show drun -show-icons",
 		"on-click-right": "killall rofi",
 		"tooltip": true,
@@ -179,8 +197,8 @@
 	},
 
 	"custom/weather": {
-		"exec": "~/.config/waybar/get_weather.sh",
-		"on-click": "kitty --hold sh -c 'curl wttr.in'",
+		"exec": "~/.config/waybar/get_weather.sh Texas",
+		"on-click": "kitty --hold sh -c 'curl wttr.in Texas'",
 		"return-type": "json",
 		"format": "{}",
 		"tooltip": true,

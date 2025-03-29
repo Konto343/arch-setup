@@ -6,7 +6,7 @@ info () {
 }
 
 yesno () {
-	read -p "${1} [Y/N] " yesno
+	read -p "${1} [y/N] " yesno
     	case $yesno in
         	[Yy]* ) 
             		return 0;
@@ -20,6 +20,8 @@ yesno () {
 		* ) return 1;
 	esac
 }
+
+info "I recommend you enabling 'multilib' in the pacman conf, so you can get all the packages installed correctly."
 
 if yesno "Do you wish to continue with the install?"; then
 	info STARTING
@@ -58,7 +60,7 @@ if yesno "Do you want to install the base setup?"; then
 	sudo pacman -S 7zip blueman btop fzf powertop dust cmus cups cups-filters cups-pdf fish flatpak git jre21-openjdk kitty nano ncdu fastfetch neovim npm pyenv tmux ufw unzip zip tar tumbler ffmpeg ffmpegthumbnailer lshw nano-syntax-highlighting tealdeer rsync powertop speedtest-cli
 
 	info "Installing Extras"
-	sudo pacman -S blender gimp qalculate-gtk orage gnome-clocks gnome-disk-utility gnome-maps cherrytree hexchat inkscape geeqie libreoffice-fresh mpv mupdf obs-studio obsidian openshot
+	sudo pacman -S blender gimp qalculate-gtk orage gnome-clocks gnome-disk-utility gnome-maps cherrytree hexchat inkscape geeqie libreoffice-fresh mpv mupdf obs-studio obsidian openshot gnome-theme-extras
 
 	info "Installing Security Extras"
 	sudo pacman -S keepassxc tor signal-desktop element-desktop syncthing wireshark-cli dnscrypt-proxy

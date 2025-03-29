@@ -1,3 +1,5 @@
+# I recommend these steps after you install arch linux.
+
 # How to install home setup to local
 sudo cp -rf ./home/. ~/
 

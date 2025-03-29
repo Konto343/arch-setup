@@ -7,7 +7,7 @@
 }
 
 window#waybar {
-	background-color: #000000;
+	background-color: transparent;
 }
 
 window#waybar.hidden {
@@ -25,7 +25,7 @@ window#waybar.hidden {
 	padding: 0px 10px;
 	margin: 0px 0px;
 	font-weight: 900;
-	background-color: #000000;
+	background-color: transparent;
 	color: #FFFFFF;
 }
 
@@ -38,7 +38,7 @@ window#waybar.hidden {
 #workspaces button:hover {
 	box-shadow: inherit;
 	text-shadow: inherit;
-	color: #000000;
+	color: #FFFFFF;
 	background-color: #212121;
 }
 
@@ -47,6 +47,7 @@ window#waybar.hidden {
 	opacity: 1;
 }
 
+#custom-weather,
 #memory,
 #custom-power,
 #user,
@@ -67,7 +68,7 @@ window#waybar.hidden {
 	margin: 0px 0px;
 	padding: 0px 10px;
 	color: #ffffff;
-	background-color: #000000;
+	background-color: transparent;
 }
 
 #backlight {
@@ -82,6 +83,7 @@ window#waybar.hidden {
 #custom-weather {
 	margin: 0px 0px;
 	padding: 0px 10px;
+	color: #0051FF;
 }
 
 #custom-power,
@@ -148,24 +150,24 @@ window#waybar.hidden {
 
 #battery {
 	color: #00FF15;
-	background-color: #000000;
+	background-color: transparent;
 	padding: 0px 10px;
 }
 
 #battery.warning,
 #battery.critical {
 	background-color: #ffaa00;
-	color: #000000;
+	color: transparent;
 }
 
 #battery.urgent {
 	background-color: #ff6f00;
-	color: #000000;
+	color: transparent;
 }
 
 #battery.charging {
 	background-color: #17ff02;
-	color: #000000;
+	color: transparent;
 }
 
 tooltip {
