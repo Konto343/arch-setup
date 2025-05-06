@@ -55,15 +55,24 @@ if yesno "Do you want to install the base setup?"; then
 	info "Installing Hyprland"
 	sudo pacman -S hypridle hyprland hyprlock hyprpaper hyprpicker xdg-desktop-portal-hyprland
 	sudo pacman -S xdg-desktop-portal-hyprland qt5-wayland qt6-wayland polkit-kde-agent kitty grim slurp thunar nwg-look nwg-bar blueman brightnessctl mako pavucontrol playerctl waybar wl-clipboard rofi ttf-jetbrains-mono-nerd power-profiles-daemon wlsunset
+	yay -S waypaper
 
 	info "Installing Must needs"
 	sudo pacman -S 7zip blueman btop fzf powertop dust cmus cups cups-filters cups-pdf fish flatpak git jre21-openjdk kitty nano ncdu fastfetch neovim npm pyenv tmux ufw unzip zip tar tumbler ffmpeg ffmpegthumbnailer lshw nano-syntax-highlighting tealdeer rsync powertop speedtest-cli
+	yay -S betterbird-bin
+
+	info "Installing Dev Software"
+	sudo pacman -S zed
+	yay -S vscodium-bin
+
+	info "Installing Broswer"
+	yay -S waterfox-bin
 
 	info "Installing Extras"
 	sudo pacman -S blender gimp qalculate-gtk orage gnome-clocks gnome-disk-utility gnome-maps cherrytree hexchat inkscape geeqie libreoffice-fresh mpv mupdf obs-studio obsidian openshot gnome-theme-extras
 
 	info "Installing Security Extras"
-	sudo pacman -S keepassxc tor signal-desktop element-desktop syncthing wireshark-cli dnscrypt-proxy
+	sudo pacman -S keepassxc tor signal-desktop element-desktop syncthing wireshark-cli
 	yay -S mullvad-vpn-bin
 
 	info "Adding Syntax Highlighting For Nano (System)"
@@ -86,7 +95,7 @@ if yesno "Do you Own a Brother Laser-Printer and want to install the driver?"; t
 fi
 
 if yesno "Do you want to install extra yay packages?"; then
-	yay -S vesktop-bin vscodium-bin betterbird-bin librewolf-bin cbonsai pipes.sh cava waypaper localsend-bin
+	yay -S vesktop-bin cbonsai pipes.sh cava localsend-bin
 fi
 
 info "SETUP COMPLETE"

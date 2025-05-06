@@ -1,8 +1,10 @@
-![alt text](image.png "Image")
+![alt text](image.png "Decal")
 
 # My Arch Setup:
 My arch setup for new computers. Includes my personal dotfile and scripts as well.
 I nicked name this setup: "Kool"
+
+![alt text](sample_look.png "Preview")
 
 This setup is supposed to be:
 - Fast & Minimalist
@@ -20,15 +22,15 @@ home directory.
 - File Explorer:	Thunar
 - Window Compsitor: 	Hyprland **+ Waybar,Hyprlock,Hypridle,Waypaper,Hyprpicker**
 - Firewall:		Ufw
-- Browser: 		LibreWolf
+- Browser: 		WaterFox
 - Communications: 	Vesktop, Hexchat
 - Mail: 		BetterBird
 - Passwords: 		KeePassXc
 - Recording:		Obs
-- Code Editor:		VsCodium
+- Code Editor:		VsCodium, Zed
 - Text Editor:		Neovim, Nano
 - Video Player:		Mpv
 - Notes:		Obsidian
 - Video Editor:		OpenShot
 - Office Suite:		LibreOffice (Fresh)
-- Image Editor:		Gimp,Inkscape
+- Image Editor:		Gimp, Inkscape
