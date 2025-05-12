@@ -7,7 +7,7 @@
 }
 
 window#waybar {
-	background-color: transparent;
+	background-color: rgba(0,0,0,.7);
 }
 
 window#waybar.hidden {
@@ -89,7 +89,7 @@ window#waybar.hidden {
 #custom-power,
 #custom-launcher {
 	margin: 0px 0px;
-	padding: 0px 20px;
+	padding: 0px 10px;
 	color: #FFFFFF;
 }
 

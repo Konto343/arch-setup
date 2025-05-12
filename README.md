@@ -1,18 +1,16 @@
-![alt text](image.png "Decal")
-
 # My Arch Setup:
 My arch setup for new computers. Includes my personal dotfile and scripts as well.
 I nicked name this setup: "Kool"
 
-![alt text](sample_look.png "Preview")
+![alt text](preview.png "Preview")
 
 This setup is supposed to be:
 - Fast & Minimalist
 - Cool
 
 ## Usage:
-Copy the Repo, and run the "install_setup.sh" script, and finally copy over the "home" folder to your
-home directory.
+Copy the Repo, and run the "install_setup.sh" script in "scripts", and finally copy over the "home" folder to your
+home directory with: *sudo cp -rf ./home/. ~/*
 
 ## In this setup:
 - Terminal: 		Kitty
@@ -20,7 +18,7 @@ home directory.
 - Notifier:		Mako
 - App Launcher:		Rofi
 - File Explorer:	Thunar
-- Window Compsitor: 	Hyprland **+ Waybar,Hyprlock,Hypridle,Waypaper,Hyprpicker**
+- Window Compsitor: 	Hyprland *+ Waybar,Hyprlock,Hypridle,Waypaper,Hyprpicker*
 - Firewall:		Ufw
 - Browser: 		WaterFox
 - Communications: 	Vesktop, Hexchat
