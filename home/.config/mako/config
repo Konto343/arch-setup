@@ -1,2 +1,4 @@
 on-button-right=dismiss-all
 background-color=#000000
+default-timeout=30000
+progress-color=source #FFFFFFFF
