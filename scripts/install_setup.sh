@@ -82,6 +82,10 @@ if yesno "Do you want to install the base setup?"; then
 	sudo pacman -S gvfs gvfs-gphoto2 gvfs-mtp mtpfs ntfs-3g
 fi
 
+if yesno "Do you want to set Thunar (File Explorer) as the Default opener for directories?"; then
+	xdg-mime default thunar.desktop inode/directory
+fi
+
 if yesno "Do you have a Nvidia GPU?"; then
 	sudo pacman -S nvidia nvidia-utils nvidia-container-toolkit opencl-nvidia # lib32-nvidia-utils
 fi
