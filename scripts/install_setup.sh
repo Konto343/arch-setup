@@ -34,7 +34,7 @@ sudo pacman -S --needed base-devel git github-cli reflector
 
 if yesno "Do you want update Pacman Mirrors to the fastest available? (Will override current.)"; then
 	info "Getting fastest Pacman mirrors"
-	sudo reflector --country France,Germany --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose
+	sudo reflector --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose
 fi
 
 info "Before Starting, it's Recommended to install AUR helper, such as YAY."
@@ -58,7 +58,7 @@ if yesno "Do you want to install the base setup?"; then
 	yay -S waypaper
 
 	info "Installing Must needs"
-	sudo pacman -S 7zip blueman btop fzf powertop dust cmus cups cups-filters cups-pdf fish flatpak git jre21-openjdk kitty nano ncdu fastfetch neovim npm pyenv tmux ufw unzip zip tar tumbler ffmpeg ffmpegthumbnailer lshw nano-syntax-highlighting tealdeer rsync powertop speedtest-cli dysk
+	sudo pacman -S 7zip blueman btop fzf powertop dust cmus cups cups-filters cups-pdf fish flatpak git jre21-openjdk kitty nano ncdu fastfetch neovim npm pyenv tmux ufw unzip zip tar tumbler ffmpeg ffmpegthumbnailer lshw nano-syntax-highlighting tealdeer rsync powertop speedtest-cli dysk cronie
 	yay -S betterbird-bin
 
 	info "Installing Dev Software"
@@ -69,7 +69,7 @@ if yesno "Do you want to install the base setup?"; then
 	yay -S waterfox-bin
 
 	info "Installing Extras"
-	sudo pacman -S blender gimp qalculate-gtk orage gnome-clocks gnome-disk-utility gnome-maps cherrytree hexchat inkscape geeqie libreoffice-fresh mpv mupdf obs-studio obsidian openshot gnome-theme-extras
+	sudo pacman -S blender gimp qalculate-gtk orage gnome-clocks gnome-disk-utility gnome-maps cherrytree hexchat inkscape geeqie libreoffice-fresh mpv mupdf obs-studio obsidian openshot gnome-theme-extras shotcut handbrake
 
 	info "Installing Security Extras"
 	sudo pacman -S keepassxc tor signal-desktop element-desktop syncthing wireshark-cli

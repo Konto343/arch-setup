@@ -24,4 +24,15 @@
 	<other-files/>
 	<text-files/>
 </action>
+<action>
+        <name>Ffmpeg Data</name>
+        <submenu></submenu>
+        <unique-id>1740154063398771-1</unique-id>
+        <command>kitty --hold -e ffmpeg -i %f</command>
+        <description>Prints file data with Ffmpeg</description>
+        <range>*</range>
+        <patterns>*</patterns>
+        <other-files/>
+        <text-files/>
+</action>
 </actions>

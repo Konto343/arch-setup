@@ -12,6 +12,7 @@ set fish_greeting
 # Alias
 alias ls='ls -la'
 alias reload_waybar="pkill waybar && hyprctl dispatch exec waybar"
+alias refresh_mirrors="sudo reflector --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose"
 
 function weather
     curl "https://wttr.in/$argv[1]"
